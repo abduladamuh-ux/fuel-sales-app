@@ -1,10 +1,13 @@
-from sales import calculate_fuel_sales, calculate_total_station_sales
+from sales import calculate_fuel_sales, calculate_total_station_sales, get_sales_count
 
 sales = [
     {"product": "Petrol", "price": 1410, "quantity": 1500},
     {"product": "Diesel", "price": 1200, "quantity": 800},
     {"product": "CNG", "price": 800, "quantity": 500}
 ]
+
+sales_count = get_sales_count(sales)
+print(f"Number of sales: {sales_count}")
 
 total_station_sales = 0
 total_station_sales = calculate_total_station_sales(sales)

@@ -23,3 +23,7 @@ def calculate_total_station_sales(sales):
         total_station_sales += total_sales
 
     return total_station_sales
+
+
+def get_sales_count(sales):
+    return len(sales)
