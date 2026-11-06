@@ -1,4 +1,4 @@
-from sales import calculate_fuel_sales
+from sales import calculate_fuel_sales, calculate_total_station_sales
 
 sales = [
     {"product": "Petrol", "price": 1410, "quantity": 1500},
@@ -7,6 +7,8 @@ sales = [
 ]
 
 total_station_sales = 0
+total_station_sales = calculate_total_station_sales(sales)
+    
 
 for sale in sales:
     product = sale["product"]
@@ -14,8 +16,7 @@ for sale in sales:
     quantity = sale["quantity"]
 
     total_sales = calculate_fuel_sales(product, price, quantity)
-    total_station_sales += total_sales
-    
+   
     print(f"Product: {product}")
     print(f"Price: ₦{price:,.2f}")
     print(f"Quantity: {quantity}")

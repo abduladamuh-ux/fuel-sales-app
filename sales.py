@@ -10,3 +10,16 @@ def calculate_fuel_sales(product, price, quantity):
     total_sales = quantity * price
        
     return total_sales
+
+
+def calculate_total_station_sales(sales):
+    total_station_sales = 0
+    for sale in sales:
+        price = sale["price"]
+        quantity = sale["quantity"]
+
+        total_sales = price * quantity
+        
+        total_station_sales += total_sales
+
+    return total_station_sales
